@@ -20,17 +20,17 @@ jobs:
       - name: Login to docker hub
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
       - name: Build docker image
-        run: docker build -t vishalraje/Spring-AWS .
+        run: docker build -t barkulvishal5/spring-aws .
       - name: Publish image to docker hub
-        run: docker push vishalraje/Spring-AWS:latest
+        run: docker push barkulvishal5/spring-aws:latest
 
   deploy:
     needs: build
     runs-on: self-hosted
     steps:
       - name: Pull Image from docker hub
-        run: docker pull vishalraje/Spring-AWS:latest
+        run: docker pull barkulvishal5/spring-aws:latest
       - name: Delete old container
         run: docker rm -f Spring-AWS-container
       - name: Run docker container
-        run: docker run -d -p 8080:8080 --name Spring-AWS-container vishalraje/Spring-AWS
+        run: docker run -d -p 8080:8080 --name Spring-AWS-container barkulvishal5/spring-aws
