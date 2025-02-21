@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cts.fmc</groupId>
-	<artifactId>SBMS-AWS-FMC2</artifactId>
+	<artifactId>Spring-AWS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SBMS-AWS-FMC2</name>
+	<name>Spring-AWS</name>
 	<description>Demo project for Spring Boot</description>
 	
 	<properties>
@@ -37,7 +37,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>SBMS-AWS-FMC2</finalName>
+		<finalName>Spring-AWS</finalName>
 	</build>
 
 </project>
