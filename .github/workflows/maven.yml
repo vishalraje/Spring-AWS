@@ -17,14 +17,12 @@ jobs:
           java-version: '17'
       - name: Build Project
         run: mvn clean install -DskipTests
-      - name: Set password from secrets
-        run: echo "MY_PASSWORD=${{secrets.DOCKER_PASSWORD}}" >> $GITHUB_ENV
-      - name: Print password
-        run: echo "Password is $MY_PASSWORD"
       - name: test
-        run: echo "docker login -u barkulvishal5@gmail.com -p CERTaw$IN25"
+        run: echo "CERTaw$IN25"
+      - name: test2
+        run: echo 'CERTaw$IN25'
       - name: Login to docker hub
-        run: docker login -u barkulvishal5@gmail.com -p $MY_PASSWORD
+        run: docker login -u barkulvishal5@gmail.com -p "CERTaw$IN25"
       - name: Build docker image
         run: docker build -t barkulvishal5/spring-aws .
       - name: Publish image to docker hub
