@@ -8,6 +8,6 @@ public class UserController {
 
     @GetMapping
     public String getMapping() {
-        return "Hello FMC!!!";
+        return "Hello CTC !!!";
     }
 }
