@@ -22,7 +22,7 @@ jobs:
       - name: test2
         run: echo 'CERTaw$IN25'
       - name: Login to docker hub
-        run: docker login -u barkulvishal5@gmail.com -p "CERTaw$IN25"
+        run: docker login -u barkulvishal5@gmail.com -p 'CERTaw$IN25'
       - name: Build docker image
         run: docker build -t barkulvishal5/spring-aws .
       - name: Publish image to docker hub
